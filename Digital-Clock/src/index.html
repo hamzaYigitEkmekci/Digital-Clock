@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Digital Clock</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="/src/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <p class="display-4 text-center mt-2">Digital Clock</p>
+
+    <div class="container">
+       <hr>
+       <div id="result1">
+        
+       </div>
+       <div id="result2">
+
+      </div>
+       <hr>
+    </div>
+
+    <script>
+
+        function digital_clock(){
+
+         const date = new Date();
+
+        //  Hour Part
+
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let result1 = document.getElementById("result1");
+        
+        // Date Part
+            let day = date.getDay();
+            let month = date.getMonth();
+            let year = date.getFullYear();
+            let result2 = document.getElementById("result2");
+
+        
+         
+        result1.innerHTML = hours +  "/" + minutes + "/" + seconds;
+        result2.innerHTML = day + "/" + month + "/" + year;
+
+        
+
+        console.log(result1);
+        console.log(result2);
+        };
+
+        setInterval(
+            digital_clock,
+            1000
+        )
+
+        set
+
+    </script>
+  </body>
+</html>
